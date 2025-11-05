@@ -1,0 +1,53 @@
+{
+    "60610cfd-fa28-4fc1-9e72-088b5c667e81": {
+        "id": "4f532724-b646-4081-9c6a-92cf0d79aff8",
+        "name": "Calendly",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "60610cfd-fa28-4fc1-9e72-088b5c667e81",
+        "publicData": {}
+    },
+    "ee24f5ac-e15e-4ddd-baa4-0b4baedf90c9": {
+        "id": "dcb63a81-7d4a-4aa6-b760-51a65030d72c",
+        "name": "CSV",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "ee24f5ac-e15e-4ddd-baa4-0b4baedf90c9",
+        "publicData": {}
+    },
+    "cabb43dd-6161-4140-8ebf-03b6fb045a0b": {
+        "id": "c5699e31-f6f3-4e88-8f80-2d3383ba9ee2",
+        "name": "Google",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "cabb43dd-6161-4140-8ebf-03b6fb045a0b",
+        "publicData": {}
+    },
+    "2bd1c688-31c5-443e-ae25-59aa5b6431fb": {
+        "id": "2845f93b-b446-470f-9a2a-1ce91bd5e978",
+        "name": "REST API",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "2bd1c688-31c5-443e-ae25-59aa5b6431fb",
+        "publicData": {}
+    },
+    "832d6f7a-42c3-43f1-a3ce-9a678272f811": {
+        "id": "b99f4b04-e637-4b05-9524-745261e290fb",
+        "name": "Date",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "832d6f7a-42c3-43f1-a3ce-9a678272f811",
+        "publicData": {
+            "favoriteFormat": "MM,DD,YYYY"
+        }
+    },
+    "9c40819b-4a8f-468f-9ba5-4b9699f3361f": {
+        "id": "718a9d04-c660-47a1-ac9c-d1b836966649",
+        "name": "Charts",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "9c40819b-4a8f-468f-9ba5-4b9699f3361f",
+        "publicData": {}
+    },
+    "1c5f5c0f-5609-4031-9e57-5bb4811be7b3": {
+        "id": "e8378f3e-4ecf-4153-92c0-e05eb1791f3c",
+        "name": "Youtube",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "1c5f5c0f-5609-4031-9e57-5bb4811be7b3",
+        "publicData": {}
+    }
+}
