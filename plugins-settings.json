@@ -43,11 +43,39 @@
         "pluginId": "9c40819b-4a8f-468f-9ba5-4b9699f3361f",
         "publicData": {}
     },
+    "e93a2dfd-9b19-473e-b445-c666fed4e14a": {
+        "id": "66f90418-eb33-4594-9f4d-f8aa4586c800",
+        "name": "Auth0",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "e93a2dfd-9b19-473e-b445-c666fed4e14a",
+        "publicData": {
+            "domain": "dev-jzknpecvulaa73xj.au.auth0.com",
+            "M2MClientId": "99WDVC1EyXVZ7tsScNZaFiYom844WCUi",
+            "SPAClientId": "68SwbUQkC0C6WzmTGr79lH3sTzyDhNhQ",
+            "afterSignInPageId": "62df40fb-9a05-4e34-b681-e5731727e3ac",
+            "afterForbiddenPageId": "4196c61a-608d-4515-bf70-6232e0e9f9bb",
+            "afterNotSignInPageId": "4196c61a-608d-4515-bf70-6232e0e9f9bb"
+        }
+    },
     "1c5f5c0f-5609-4031-9e57-5bb4811be7b3": {
         "id": "e8378f3e-4ecf-4153-92c0-e05eb1791f3c",
         "name": "Youtube",
         "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
         "pluginId": "1c5f5c0f-5609-4031-9e57-5bb4811be7b3",
+        "publicData": {}
+    },
+    "1fa0dd68-5069-436c-9a7d-3b54c340f1fa": {
+        "id": "b2658b5c-6d84-40f1-9f4e-249ebab0f9b0",
+        "name": "Supabase Auth",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "1fa0dd68-5069-436c-9a7d-3b54c340f1fa",
+        "publicData": {}
+    },
+    "f9ef41c3-1c53-4857-855b-f2f6a40b7186": {
+        "id": "c94fdde2-9d92-434a-9cdc-fb5602e7b7f8",
+        "name": "Supabase",
+        "designId": "ab9945eb-9031-4def-ae86-ca5da01df00e",
+        "pluginId": "f9ef41c3-1c53-4857-855b-f2f6a40b7186",
         "publicData": {}
     }
 }

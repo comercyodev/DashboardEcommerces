@@ -12,7 +12,13 @@
       :theme="theme"
       :getRowId="getRowId"
       :pagination="content.pagination"
-      :paginationPageSize="forcedPaginationPageSize ? 0 : paginationPageSizeSelector ? paginationPageSizeSelector[0]: content.paginationPageSize"
+      :paginationPageSize="
+        forcedPaginationPageSize
+          ? 0
+          : paginationPageSizeSelector
+          ? paginationPageSizeSelector[0]
+          : content.paginationPageSize
+      "
       :paginationPageSizeSelector="paginationPageSizeSelector"
       :suppressMovableColumns="!content.movableColumns"
       :columnHoverHighlight="content.columnHoverHighlight"
@@ -36,7 +42,15 @@
 </template>
 
 <script>
-import { shallowRef, watchEffect, computed, inject, watch, nextTick, ref } from "vue";
+import {
+  shallowRef,
+  watchEffect,
+  computed,
+  inject,
+  watch,
+  nextTick,
+  ref,
+} from "vue";
 import { AgGridVue } from "ag-grid-vue3";
 import {
   AllCommunityModule,
@@ -119,18 +133,24 @@ export default {
       setColumnOrder(columns.map((col) => col.getColId()));
     };
 
-    let initialFilter = '';
-    let initialSort = '';
+    let initialFilter = "";
+    let initialSort = "";
 
     watchEffect(() => {
       // Both initial filters and sort should be set here to avoid conflicts with column state application
       // We keep track of previous values to avoid reinitializing one when only the other changes
       if (!gridApi.value) return;
-      if (props.content.initialFilters && initialFilter !== JSON.stringify(props.content.initialFilters)) {
+      if (
+        props.content.initialFilters &&
+        initialFilter !== JSON.stringify(props.content.initialFilters)
+      ) {
         gridApi.value.setFilterModel(props.content.initialFilters);
         initialFilter = JSON.stringify(props.content.initialFilters);
       }
-      if (props.content.initialSort && initialSort !== JSON.stringify(props.content.initialSort)) {
+      if (
+        props.content.initialSort &&
+        initialSort !== JSON.stringify(props.content.initialSort)
+      ) {
         gridApi.value.applyColumnState({
           state: props.content.initialSort || [],
           defaultState: { sort: null },
@@ -145,7 +165,7 @@ export default {
         gridApi.value.applyColumnState({
           state: props.content.initialColumnsOrder.map((colId) => ({ colId })),
           applyOrder: true,
-        })
+        });
       }
     });
 
@@ -257,7 +277,7 @@ export default {
     watch(
       () => props.content.hasPaginationSelector,
       (newVal, oldVal) => {
-        if (oldVal === 'multiple' && newVal !== 'multiple') {
+        if (oldVal === "multiple" && newVal !== "multiple") {
           forcedPaginationPageSize.value = true;
           nextTick().then(() => {
             forcedPaginationPageSize.value = false;
@@ -265,6 +285,17 @@ export default {
         }
       }
     );
+
+    const rowData = computed(() => {
+      const data = wwLib.wwUtils.getDataFromCollection(props.content.rowData);
+      return Array.isArray(data) ? data ?? [] : [];
+    });
+
+    function refreshData() {
+      nextTick(() => {
+        gridApi.value?.refreshCells()
+      });
+    }
 
     return {
       resolveMappingFormula,
@@ -298,13 +329,11 @@ export default {
       onRowDragEnter,
       onColumnMoved,
       initialState,
+      refreshData,
+      rowData,
     };
   },
   computed: {
-    rowData() {
-      const data = wwLib.wwUtils.getDataFromCollection(this.content.rowData);
-      return Array.isArray(data) ? data ?? [] : [];
-    },
     defaultColDef() {
       return {
         editable: false,
@@ -500,14 +529,20 @@ export default {
       return false;
     },
     paginationPageSizeSelector() {
-      if (!this.content.pagination || this.content.hasPaginationSelector !== 'multiple') {
+      if (
+        !this.content.pagination ||
+        this.content.hasPaginationSelector !== "multiple"
+      ) {
         return false;
       }
-      if (!Array.isArray(this.content.paginationPageSizeSelector) || this.content.paginationPageSizeSelector.length === 0) {
+      if (
+        !Array.isArray(this.content.paginationPageSizeSelector) ||
+        this.content.paginationPageSizeSelector.length === 0
+      ) {
         return false;
       }
       return this.content.paginationPageSizeSelector;
-    }
+    },
   },
   methods: {
     getRowId(params) {
@@ -559,7 +594,9 @@ export default {
     selectAll(mode) {
       if (!this.gridApi) return;
       if (this.content.rowSelection !== "multiple") {
-        wwLib.logStore.warning('Select all will have no effect, as row selection is not set to multiple');
+        wwLib.logStore.warning(
+          "Select all will have no effect, as row selection is not set to multiple"
+        );
         return;
       }
       this.gridApi.selectAll(mode || this.content.selectAll || "all");

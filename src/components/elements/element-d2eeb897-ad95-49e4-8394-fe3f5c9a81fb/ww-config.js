@@ -248,6 +248,10 @@ export default {
         },
       ],
     },
+    {
+      label: "Force Datagrid refresh",
+      action: "refreshData",
+    }
   ],
   properties: {
     layout: {

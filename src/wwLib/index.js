@@ -5,8 +5,11 @@ import { useIconsStore } from '@/pinia/icons';
  /* wwFront:start */
 // eslint-disable-next-line no-undef
 import plugin_cabb43dd_6161_4140_8ebf_03b6fb045a0b from '@/components/plugins/plugin-cabb43dd-6161-4140-8ebf-03b6fb045a0b/src/wwPlugin.js';
+import plugin_e93a2dfd_9b19_473e_b445_c666fed4e14a from '@/components/plugins/plugin-e93a2dfd-9b19-473e-b445-c666fed4e14a/src/wwPlugin.js';
 import plugin_832d6f7a_42c3_43f1_a3ce_9a678272f811 from '@/components/plugins/plugin-832d6f7a-42c3-43f1-a3ce-9a678272f811/src/wwPlugin.js';
 import plugin_2bd1c688_31c5_443e_ae25_59aa5b6431fb from '@/components/plugins/plugin-2bd1c688-31c5-443e-ae25-59aa5b6431fb/src/wwPlugin.js';
+import plugin_f9ef41c3_1c53_4857_855b_f2f6a40b7186 from '@/components/plugins/plugin-f9ef41c3-1c53-4857-855b-f2f6a40b7186/src/wwPlugin.js';
+import plugin_1fa0dd68_5069_436c_9a7d_3b54c340f1fa from '@/components/plugins/plugin-1fa0dd68-5069-436c-9a7d-3b54c340f1fa/src/wwPlugin.js';
 import plugin_ee24f5ac_e15e_4ddd_baa4_0b4baedf90c9 from '@/components/plugins/plugin-ee24f5ac-e15e-4ddd-baa4-0b4baedf90c9/src/wwPlugin.js';
 import plugin_1c5f5c0f_5609_4031_9e57_5bb4811be7b3 from '@/components/plugins/plugin-1c5f5c0f-5609-4031-9e57-5bb4811be7b3/src/wwPlugin.js';
 import plugin_60610cfd_fa28_4fc1_9e72_088b5c667e81 from '@/components/plugins/plugin-60610cfd-fa28-4fc1-9e72-088b5c667e81/src/wwPlugin.js';
@@ -53,8 +56,11 @@ export default {
         /* wwFront:start */
         // eslint-disable-next-line no-undef
         wwLib.wwPluginHelper.registerPlugin('plugin-cabb43dd-6161-4140-8ebf-03b6fb045a0b', plugin_cabb43dd_6161_4140_8ebf_03b6fb045a0b);
+wwLib.wwPluginHelper.registerPlugin('plugin-e93a2dfd-9b19-473e-b445-c666fed4e14a', plugin_e93a2dfd_9b19_473e_b445_c666fed4e14a);
 wwLib.wwPluginHelper.registerPlugin('plugin-832d6f7a-42c3-43f1-a3ce-9a678272f811', plugin_832d6f7a_42c3_43f1_a3ce_9a678272f811);
 wwLib.wwPluginHelper.registerPlugin('plugin-2bd1c688-31c5-443e-ae25-59aa5b6431fb', plugin_2bd1c688_31c5_443e_ae25_59aa5b6431fb);
+wwLib.wwPluginHelper.registerPlugin('plugin-f9ef41c3-1c53-4857-855b-f2f6a40b7186', plugin_f9ef41c3_1c53_4857_855b_f2f6a40b7186);
+wwLib.wwPluginHelper.registerPlugin('plugin-1fa0dd68-5069-436c-9a7d-3b54c340f1fa', plugin_1fa0dd68_5069_436c_9a7d_3b54c340f1fa);
 wwLib.wwPluginHelper.registerPlugin('plugin-ee24f5ac-e15e-4ddd-baa4-0b4baedf90c9', plugin_ee24f5ac_e15e_4ddd_baa4_0b4baedf90c9);
 wwLib.wwPluginHelper.registerPlugin('plugin-1c5f5c0f-5609-4031-9e57-5bb4811be7b3', plugin_1c5f5c0f_5609_4031_9e57_5bb4811be7b3);
 wwLib.wwPluginHelper.registerPlugin('plugin-60610cfd-fa28-4fc1-9e72-088b5c667e81', plugin_60610cfd_fa28_4fc1_9e72_088b5c667e81);
